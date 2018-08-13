@@ -45,3 +45,10 @@ print(_.padEnd('abc', 1));
 
 print('get now method output');
 print(_.now());
+
+// The _.times() executes the function n times. 
+
+_.times(4, () => {
+
+    console.log("brave");
+})
