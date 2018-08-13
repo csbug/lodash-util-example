@@ -52,3 +52,7 @@ _.times(4, () => {
 
     console.log("brave");
 })
+
+// range  
+const vals3 = _.range(0, 15, 5);
+console.log(vals3);
