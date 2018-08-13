@@ -2,7 +2,7 @@
 var _ = require('lodash');
 const print = console.log;
 
-const ver = function(){print('lodash version : '+ _.VERSION);}
+const ver = function() { print('lodash version : ' + _.VERSION); }
 ver();
 
 //Lodash random number
@@ -12,8 +12,8 @@ print(r);
 
 
 // Lodash determine data type
-const vals = [1, 2, 'good', [1, 2], {name: 'Peter', age: 32}];
-vals.forEach( (e) => {
+const vals = [1, 2, 'good', [1, 2], { name: 'Peter', age: 32 }];
+vals.forEach((e) => {
 
     if (_.isNumber(e)) {
         print(`${e} is a number`);
@@ -34,5 +34,14 @@ vals.forEach( (e) => {
 });
 
 //Lodash _.range function
-const rangeVals = _.range(5,10);
+const rangeVals = _.range(5, 10);
 print(rangeVals);
+
+print(_.padEnd('abc', 1));
+
+
+// Date Methods
+// Gets the timestamp of the number of milliseconds that have elapsed since the Unix epoch (1 January 1970 00:00:00 UTC).
+
+print('get now method output');
+print(_.now());
