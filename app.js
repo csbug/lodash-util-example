@@ -63,3 +63,11 @@ print(_.chunk(['a', 'b', 'c', 'd'], 3));
 
 // Creates an array with all falsey values removed. The values false, null, 0, "", undefined, and NaN are falsey.
 print(_.compact([0, 1, false, 2, '', 3, null]));
+
+// Creates a new array concatenating array with any additional arrays and/or values.
+var array = [1];
+var other = _.concat(array, 2, [3], [
+    [4]
+]);
+
+print(other);
