@@ -56,3 +56,6 @@ _.times(4, () => {
 // range  
 const vals3 = _.range(0, 15, 5);
 console.log(vals3);
+
+// Creates an array of elements split into groups the length of size. If array can't be split evenly, the final chunk will be the remaining elements.
+print(_.chunk(['a', 'b', 'c', 'd'], 3));
