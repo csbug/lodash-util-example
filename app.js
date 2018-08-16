@@ -59,3 +59,7 @@ console.log(vals3);
 
 // Creates an array of elements split into groups the length of size. If array can't be split evenly, the final chunk will be the remaining elements.
 print(_.chunk(['a', 'b', 'c', 'd'], 3));
+
+
+// Creates an array with all falsey values removed. The values false, null, 0, "", undefined, and NaN are falsey.
+print(_.compact([0, 1, false, 2, '', 3, null]));
