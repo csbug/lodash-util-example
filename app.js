@@ -108,3 +108,27 @@ print(objA); // {"name": "colin"}
 // Lodash
 objA = _.omit(objA, ['car', 'age']); // {"name": "colin"}
 print(objA);
+
+
+// Select properties from another object to form new object
+// Naive method: Returning a new object with selected properties 
+Object.prototype.pick = function(arr) {
+    var _this = this;
+    var obj = {};
+    arr.forEach(function(key) {
+        obj[key] = _this[key];
+    });
+
+    return obj;
+};
+
+var objA = { "name": "colin", "car": "suzuki", "age": 17 };
+
+var objB = objA.pick(['car', 'age']);
+print(objB);
+// {"car": "suzuki", "age": 17}
+
+// Lodash
+var objB = _.pick(objA, ['car', 'age']);
+// {"car": "suzuki", "age": 17}
+print(objB);
