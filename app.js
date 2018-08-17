@@ -71,3 +71,21 @@ var other = _.concat(array, 2, [3], [
 ]);
 
 print(other);
+
+// Loop through a collection and return a deeply-nested property from each item
+// Fetch the name of the first pet from each owner
+var ownerArr = [{
+    "owner": "Colin",
+    "pets": [{ "name": "dog1" }, { "name": "dog2" }]
+}, {
+    "owner": "John",
+    "pets": [{ "name": "dog3" }, { "name": "dog4" }]
+}];
+
+// Array's map method.
+print(ownerArr.map(function(owner) {
+    return owner.pets[0].name;
+}));
+
+// Lodash
+print(_.map(ownerArr, 'pets[0].name'));
