@@ -132,3 +132,22 @@ print(objB);
 var objB = _.pick(objA, ['car', 'age']);
 // {"car": "suzuki", "age": 17}
 print(objB);
+
+
+// Selecting a random item from a list
+
+var luckyDraw = ["Colin", "John", "James", "Lily", "Mary"];
+
+function pickRandomPerson(luckyDraw) {
+    var index = Math.floor(Math.random() * (luckyDraw.length));
+    return luckyDraw[index];
+}
+
+print(pickRandomPerson(luckyDraw)); // John
+
+// Lodash
+print(_.sample(luckyDraw)); // Colin
+
+// Multiple random item
+// Lodash - Getting 2 random item
+print(_.sample(luckyDraw, 2)); // ['John','Lily']
