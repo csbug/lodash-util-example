@@ -89,3 +89,22 @@ print(ownerArr.map(function(owner) {
 
 // Lodash
 print(_.map(ownerArr, 'pets[0].name'));
+
+
+// Removing properties from object
+// Naive method: Remove an array of keys from object
+Object.prototype.remove = function(arr) {
+    var that = this;
+    arr.forEach(function(key) {
+        delete(that[key]);
+    });
+};
+
+var objA = { "name": "colin", "car": "suzuki", "age": 17 };
+
+objA.remove(['car', 'age']);
+print(objA); // {"name": "colin"}
+
+// Lodash
+objA = _.omit(objA, ['car', 'age']); // {"name": "colin"}
+print(objA);
